@@ -233,3 +233,152 @@ weather_df %>%
     ## Warning: Removed 15 rows containing missing values (geom_point).
 
 ![](viz_ii_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+
+## Themes
+
+Shift the legend.
+
+``` r
+weather_df %>%
+  ggplot(aes(x = tmin, y = tmax, color = name)) +
+  geom_point(alpha = .5) +
+  labs(
+    title = "Temperature plot",
+    x = "Minimum daily temperature (C)",
+    y = "Maximum daily temperature (C)",
+    caption = "Data from rnoaa package; temperatures in 2017."
+  ) +
+  viridis::scale_color_viridis(
+    name = "Location",
+    discrete = TRUE) +
+  theme(legend.position =  "bottom")
+```
+
+    ## Warning: Removed 15 rows containing missing values (geom_point).
+
+![](viz_ii_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+
+Change the overall theme.
+
+theme\_minimal(): get rid of the box outside.
+
+``` r
+weather_df %>%
+  ggplot(aes(x = tmin, y = tmax, color = name)) +
+  geom_point(alpha = .5) +
+  labs(
+    title = "Temperature plot",
+    x = "Minimum daily temperature (C)",
+    y = "Maximum daily temperature (C)",
+    caption = "Data from rnoaa package; temperatures in 2017."
+  ) +
+  viridis::scale_color_viridis(
+    name = "Location",
+    discrete = TRUE) +
+  theme_minimal()
+```
+
+    ## Warning: Removed 15 rows containing missing values (geom_point).
+
+![](viz_ii_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+
+``` r
+weather_df %>%
+  ggplot(aes(x = tmin, y = tmax, color = name)) +
+  geom_point(alpha = .5) +
+  labs(
+    title = "Temperature plot",
+    x = "Minimum daily temperature (C)",
+    y = "Maximum daily temperature (C)",
+    caption = "Data from rnoaa package; temperatures in 2017."
+  ) +
+  viridis::scale_color_viridis(
+    name = "Location",
+    discrete = TRUE) +
+  theme_classic()
+```
+
+    ## Warning: Removed 15 rows containing missing values (geom_point).
+
+![](viz_ii_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+
+``` r
+weather_df %>%
+  ggplot(aes(x = tmin, y = tmax, color = name)) +
+  geom_point(alpha = .5) +
+  labs(
+    title = "Temperature plot",
+    x = "Minimum daily temperature (C)",
+    y = "Maximum daily temperature (C)",
+    caption = "Data from rnoaa package; temperatures in 2017."
+  ) +
+  viridis::scale_color_viridis(
+    name = "Location",
+    discrete = TRUE) +
+  ggthemes::theme_economist()
+```
+
+    ## Warning: Removed 15 rows containing missing values (geom_point).
+
+![](viz_ii_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+
+``` r
+weather_df %>%
+  ggplot(aes(x = tmin, y = tmax, color = name)) +
+  geom_point(alpha = .5) +
+  labs(
+    title = "Temperature plot",
+    x = "Minimum daily temperature (C)",
+    y = "Maximum daily temperature (C)",
+    caption = "Data from rnoaa package; temperatures in 2017."
+  ) +
+  viridis::scale_color_viridis(
+    name = "Location",
+    discrete = TRUE) +
+  ggthemes::theme_excel()
+```
+
+    ## Warning: Removed 15 rows containing missing values (geom_point).
+
+![](viz_ii_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+
+``` r
+weather_df %>%
+  ggplot(aes(x = tmin, y = tmax, color = name)) +
+  geom_point(alpha = .5) +
+  labs(
+    title = "Temperature plot",
+    x = "Minimum daily temperature (C)",
+    y = "Maximum daily temperature (C)",
+    caption = "Data from rnoaa package; temperatures in 2017."
+  ) +
+  viridis::scale_color_viridis(
+    name = "Location",
+    discrete = TRUE) +
+  theme_minimal()
+```
+
+    ## Warning: Removed 15 rows containing missing values (geom_point).
+
+![](viz_ii_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+
+``` r
+weather_df %>%
+  ggplot(aes(x = tmin, y = tmax, color = name)) +
+  geom_point(alpha = .5) +
+  labs(
+    title = "Temperature plot",
+    x = "Minimum daily temperature (C)",
+    y = "Maximum daily temperature (C)",
+    caption = "Data from rnoaa package; temperatures in 2017."
+  ) +
+  viridis::scale_color_viridis(
+    name = "Location",
+    discrete = TRUE) +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+
+    ## Warning: Removed 15 rows containing missing values (geom_point).
+
+![](viz_ii_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
